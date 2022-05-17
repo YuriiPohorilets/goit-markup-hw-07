@@ -1,0 +1,38 @@
+.filter {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.filter__item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.filter__btn {
+    padding: 6px 22px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+
+    color: getColor(primary);
+    background-color: getColor(btn-bg);
+
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    transition: color getProperty(duration) getProperty(cubic),
+                background-color getProperty(duration) getProperty(cubic),
+                box-shadow getProperty(duration) getProperty(cubic);
+
+    &:hover,
+    &:focus,
+    &--active {
+        color: getColor(active-white);
+        background-color: getColor(accent);
+        box-shadow: getShadow(button-filter);
+    }
+}

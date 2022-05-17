@@ -1,0 +1,85 @@
+// Gallery
+.gallery {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -1 * getProperty(gap-gallery);
+    margin-left: -1 * getProperty(gap-gallery);
+}
+
+.gallery__item {
+    flex-basis: 370px;
+    margin-top: getProperty(gap-gallery);
+    margin-left: getProperty(gap-gallery);
+
+    background-color: getColor(active-white);
+
+    transition: box-shadow getProperty(duration) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        box-shadow: getShadow(gallery-card);
+    }
+}
+
+.gallery__link {
+    @extend %link;
+}
+
+// Gallery overlay
+.gallery__thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform getProperty(duration) getProperty(cubic);
+
+    background-color: getColor(accent-opacity);
+}
+
+.gallery__item:hover .gallery__overlay {
+    transform: translateY(0);
+}
+
+.gallery__description {
+    padding: 63px 24px;
+
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+
+    color: getColor(active-white);
+}
+
+.gallery__header {
+    padding: 20px 24px;
+    border: 1px solid getColor(card);
+    border-top: none;
+}
+
+.gallery__title {
+    margin-bottom: 4px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+
+    color: getColor(primary);
+}
+
+.gallery__text {
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    color: getColor(secondary);
+}

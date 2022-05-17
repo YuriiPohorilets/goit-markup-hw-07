@@ -1,0 +1,87 @@
+// Checkbox
+.checkbox-group {
+    display: flex;
+    margin-bottom: 30px;
+
+    justify-content: center;
+    align-items: center;
+
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.checkbox-group__item {
+    position: relative;
+    width: 16px;
+    height: 15px;
+}
+
+.checkbox-group__custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 16px;
+    height: 15px;
+
+    border: 2px solid getColor(primary);
+    border-radius: 2px;
+
+    cursor: pointer;
+
+    transition: border-color getProperty(duration) getProperty(cubic),
+        background-color getProperty(duration) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        border-color: getColor(btn-hover);
+    }
+}
+
+.checkbox-group__input:focus + .checkbox-group__custom {
+    border-color: getColor(btn-hover);
+}
+
+.checkbox-group__input:checked + .checkbox-group__custom {
+    background-color: getColor(accent);
+    border-color: getColor(accent);
+}
+
+.checkbox-group__icon {
+    position: absolute;
+    width: 16px;
+    height: 15px;
+
+    transform: scale(0);
+    opacity: 0;
+
+    transition: transform getProperty(duration) getProperty(cubic),
+        opasity getProperty(duration) getProperty(cubic);
+}
+
+.checkbox-group__input:checked ~ .checkbox-group__icon {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.checkbox-group__label {
+    margin-left: 7px;
+}
+
+.checkbox-group__link {
+    color: getColor(accent);
+
+    transition: color getProperty(duration) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        color: getColor(btn-hover);
+    }
+}
+
+.btn--form {
+    margin-right: auto;
+    margin-left: auto;  
+    width: 200px;
+    height: 50px;
+}

@@ -1,0 +1,44 @@
+// Join us links
+.join {
+    margin-right: 93px;
+}
+
+.subtitle {
+    color: getColor(active-white);
+    margin-bottom: 20px;
+}
+
+.join__list {
+    @extend %list;
+    display: flex;
+}
+
+.join__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.join__link {
+    @extend %link;
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    color: getColor(active-white);
+    background-color: getColor(white-opacity-bg);
+    border-radius: 50%;
+
+    transition: background-color getProperty(duration) getProperty(cubic);
+
+    &:hover, 
+    &:focus {
+        color: getColor(active-white);
+        background-color: getColor(accent);
+    }
+}
+
+.join__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}

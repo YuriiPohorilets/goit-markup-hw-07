@@ -1,0 +1,35 @@
+// About us section
+.about-us {
+    padding-top: 0px;
+}
+
+.about-us__list {
+    @extend %list;
+    display: flex;
+}
+
+.about-us__item {
+    position: relative;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.about-us__subtitle {
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    padding: 27px 0;
+    width: 100%;
+    justify-content: center;
+
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: getColor(active-white);
+    background-color: getColor(subtitle);
+}

@@ -1,0 +1,17 @@
+.logo {
+    @extend %link;
+    font-family: getFont(logo);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: getColor(accent);
+}
+
+.logo--header {
+    color: getColor(active-black);
+}
+
+.logo--footer {
+    color: getColor(active-white);
+}

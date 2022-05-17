@@ -1,0 +1,52 @@
+// Footer contacts
+.footer {
+    padding: 60px 0px;
+    background-color: getColor(background);
+}
+
+.footer--center {
+    display: flex;
+    align-items: baseline;
+}
+
+.address {
+    margin-right: 70px;
+}
+
+.address--footer {
+    margin-top: 20px;
+}
+
+.address__list {
+    @extend %list;
+}
+
+.address__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.address__link {
+    @extend %link;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: getColor(white-opacity);
+
+    transition: color getProperty(duration) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        color: getColor(accent);
+    }
+}
+
+.address__text {
+    color: getColor(active-white);
+    transition: color getProperty(duration) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        color: getColor(accent);
+    }
+}

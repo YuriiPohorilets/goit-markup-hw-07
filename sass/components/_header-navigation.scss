@@ -1,0 +1,60 @@
+// Header navigation 
+.header {
+    border-bottom: 1px solid getColor(header-line);
+}
+
+.navigation,
+.header__navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation__list {
+    @extend %list;
+    display: flex;
+    margin-left: 93px;
+}
+
+.navigation__item {
+    position: relative;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    &:not(:last-child) {
+            margin-right: 50px;
+        }
+}
+
+.navigation__link {
+    @extend %link;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: getColor(primary);
+
+    transition: color getProperty(duration) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        color: getColor(accent);
+    }
+}
+
+.navigation__link--active {
+    color: getColor(accent);
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        width: 100%;
+        height: 4px;
+        background-color: getColor(accent);
+
+        border-radius: 2px;
+    }
+}

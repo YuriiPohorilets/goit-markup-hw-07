@@ -1,0 +1,83 @@
+// Team section
+.team {
+    background-color: getColor(btn-bg);
+}
+
+.team__list {
+    @extend %list;
+    display: flex;
+}
+
+.team__item {
+    text-align: center;
+
+    background-color: getColor(active-white);
+
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: getShadow(team-card);
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.card {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.card__name {
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+
+    color: getColor(primary);
+}
+
+.card__position {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+}
+
+.social,
+.clients__list {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    color: getColor(icon);
+}
+
+.social__list:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social__link {
+    @extend %link;
+    display: flex;
+    height: 44px;
+    width: 44px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    transition: color getProperty(duration) getProperty(cubic),
+        background-color getProperty(duration) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        color: getColor(active-white);
+        background-color: getColor(accent);
+    }
+}
+
+.social__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}

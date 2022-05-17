@@ -1,0 +1,59 @@
+body {
+    font-family: getFont(main);
+    font-size: 14px;
+
+    color: getColor('secondary');
+    background-color: getColor('active-white');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section {
+    padding: 94px 0;
+}
+
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+// Placeholders
+%list {
+    list-style: none;
+}
+
+%link {
+    text-decoration: none;
+    color: currentColor;
+}

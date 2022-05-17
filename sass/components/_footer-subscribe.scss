@@ -1,0 +1,43 @@
+// Subscribe footer form
+.subscribe__form {
+    display: flex;
+}
+
+.subscribe__input {
+    margin-right: 12px;
+    padding: 15px;
+    width: 358px;
+    height: 50px;
+
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: getColor(white-opacity);
+
+    background-color: transparent;
+    box-shadow: getShadow(button);
+    border: 1px solid getColor(border-white);
+    border-radius: 4px;
+
+    transition: border-color getProperty(duration) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        border-color: getColor(accent-opacity);
+    }
+}
+
+.btn-subscribe {
+    display: flex;
+    padding: 10px 29px;
+    width: 200px;
+    height: 50px;
+    align-items: center;
+}
+
+.subscribe__icon {
+    margin-left: 10px;
+    display: block;
+    width: 24px;
+    height: 24px;
+}

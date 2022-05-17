@@ -1,0 +1,64 @@
+// Map
+$colors: (
+    'accent': #2196f3,
+    'accent-opacity': rgba(33, 150, 243, 0.9),
+    'primary': #212121,
+    'secondary': #757575,
+    'secondary-opacity': rgba(117, 117, 117, 0.5),
+    'active-white': #ffffff,
+    'white-opacity': rgba(255, 255, 255, 0.6),
+    'white-opacity-bg': rgba(255, 255, 255, 0.1),
+    'active-black': #000000,
+    'black-opacity': rgba(0, 0, 0, 0.1),
+    'btn-hover': #188ce8,
+    'btn-bg': #f5f4fa,
+    'background': #2f303a,
+    'header-line': #ececec,
+    'card': #eeeeee,
+    'icon': #afb1b8,
+    'gradient-overlay': rgba(47, 48, 58, 0.4),
+    'subtitle': rgba(47, 48, 58, 0.8),
+    'backdrop': rgba(0, 0, 0, 0.2),
+    'border-white':rgba(255, 255, 255, 0.3),
+    'border-black': rgba(33, 33, 33, 0.2),
+);
+
+$shadows: (
+    'button': 0px 4px 4px rgba(0, 0, 0, 0.15),
+    'button-hover': 0px 4px 4px rgba(0, 0, 0, 0.25),
+    'button-filter': (0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12)),
+    'team-card': (0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2)),
+    'gallery-card': (0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16)),
+);
+
+$properties: (
+    'cubic': cubic-bezier(0.4, 0, 0.2, 1),
+    'duration': 250ms,
+    'gap-gallery': 30px,
+);
+
+$fonts: (
+    'main': ('Roboto', sans-serif),
+    'logo': ('Raleway', sans-serif),
+);
+
+// Colors
+@function getColor($key) {
+    @return map-get($colors, $key);
+}
+
+// Shadows
+@function getShadow($key) {
+    @return map-get($shadows, $key);
+}
+
+// Properties
+@function getProperty($key) {
+    @return map-get($properties, $key);
+}
+
+// Fonts
+@function getFont($key) {
+    @return map-get($fonts, $key);
+}
+
