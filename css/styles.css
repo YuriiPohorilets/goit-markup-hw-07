@@ -39,7 +39,7 @@ Gallery card shadow (gallery-item):     0px 1px 1px rgba(0, 0, 0, 0.12),
 
 Margin gallery card:                    30px;
 
-Duration: 250ms;
+Duration:                             250ms;
 
 Cubic bezier:                           cubic-bezier(0.4, 0, 0.2, 1);
 */
@@ -534,7 +534,7 @@ img {
   fill: currentColor;
 }
 
-/* Active side */
+/* Hero side */
 .hero {
   padding: 200px 0px;
   margin: 0 auto;
